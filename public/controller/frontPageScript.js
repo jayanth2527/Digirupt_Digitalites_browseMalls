@@ -7,6 +7,11 @@ app.controller("cntr",function($http, $state,$mdToast,$scope,$mdDialog){
   };
   $scope.wallet_money=123;
   $scope.addToWallet=0;
+  $scope.addMoneyToWallet=function (addToWallet) {
+    $scope.addToWallet=addToWallet;
+    $scope.wallet_money=$scope.wallet_money+addToWallet;
+    // $state.go("Home");
+  }
   console.log("im in front page ctrl");
 
   var last = {
