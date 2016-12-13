@@ -1,0 +1,38 @@
+<div class="" ng-controller="cntr">
+<div class="upper_header" layout="row" layout-align="end" >
+  <div flex-offset="10">
+    <md-icon class="material-icons" style="color:white" >account_circle</md-icon>
+    <md-button class="white-text"> {{login.username}}</md-button>
+  </div>
+  <div>
+    <span style="color:grey">|</span>
+    <md-button class="md-accent" ui-sref="Home"> Sign Out</md-button>
+  </div>
+</div>
+<div id="header" layout="row"  style="margin-bottom:5px;" >
+  <div flex="30" layout-align="start center">
+    <a href="" ui-sref="Home">
+      <img ng-src="/assets/logo.png" alt="" style="height:60px; width:300px;padding-left:20px;padding-top:10px"/>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-md-12" style="border:1px solid black;height:150px;border-radius:10px;padding:20px;">
+    <div class="col-md-12">
+      <md-input-container class="col-md-10">
+        <label>Enter Amount to be Added to wallet</label>
+          <input ng-model="addToWallet" >
+      </md-input-container>
+      <button class="btn btn-info btn-md" ng-click="addToWallet()" class="col-md-2">Add Money To Wallet</button>
+    </div>
+
+<div class="col-md-12">
+  <button class="btn btn-md" ng-click="addToWallet=500" class="col-md-4">500</button>
+  <button class="btn btn-md" ng-click="addToWallet=1000" class="col-md-4">1000</button>
+  <button class="btn btn-md" ng-click="addToWallet=2000" class="col-md-4">2000</button>
+</div>
+  </div>
+</div>
+
+</div>

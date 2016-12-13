@@ -5,6 +5,8 @@ app.controller("cntr",function($http, $state,$mdToast,$scope,$mdDialog){
   $scope.reload=function () {
     location.reload();
   };
+  $scope.wallet_money=123;
+  $scope.addToWallet=0;
   console.log("im in front page ctrl");
 
   var last = {
@@ -80,6 +82,9 @@ app.controller("cntr",function($http, $state,$mdToast,$scope,$mdDialog){
     })
     .then(function(login) {
       $scope.authentication(login);
+      $scope.pwd=login.pwd;
+      $scope.username=login.username;
+
     }, function() {
       // $scope.status = 'You cancelled the dialog.';
     });

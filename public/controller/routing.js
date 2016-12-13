@@ -22,6 +22,18 @@ app.config(function($stateProvider, $urlRouterProvider) {
         }
       }
     })
+
+    .state('addMoney', {
+      url: '/addMoney',
+      views:{
+
+        'content':{
+          templateUrl: '/templates/addMoney.html'
+        }
+      }
+    })
+
+
     .state('mallManager', {
       url: '/mallManager',
       views:{
